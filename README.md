@@ -18,10 +18,6 @@ This project has  4 Domain layer :
  * Usecase Layer  
  * Delivery Layer
 
-## The diagram:
-
-![golang clean architecture](images/clean-arch.png)
-
 ## Run the Applications
 
 ```bash
