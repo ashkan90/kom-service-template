@@ -1,4 +1,4 @@
-package bookUsecase
+package productUsecase
 
 //type bookUsecase struct {
 //	bookRepo domain.BookRepository
@@ -47,7 +47,7 @@ package bookUsecase
 //		primitive.E{Key: "_id", Value: idPrimitive},
 //	}
 //
-//	book := primitive.D{
+//	product := primitive.D{
 //		primitive.E{Key: "$set", Value: primitive.D{
 //			primitive.E{Key: "title", Value: newData.Title},
 //			primitive.E{Key: "author", Value: newData.Author},
@@ -55,7 +55,7 @@ package bookUsecase
 //		}},
 //	}
 //
-//	return bu.bookRepo.Update(bu.dbName, bu.collName, filter, book)
+//	return bu.bookRepo.Update(bu.dbName, bu.collName, filter, product)
 //}
 //
 //func (bu *bookUsecase) DeleteBook(bookID string) (interface{}, error) {

@@ -1,4 +1,4 @@
-package bookHttpDelivery_test
+package productHttpDelivery_test
 
 //func TestFetch(t *testing.T) {
 //	mockBookUCase := new(mocks.BookUsecase)
@@ -94,13 +94,13 @@ package bookHttpDelivery_test
 //		assert.NoError(t, err)
 //
 //		e := echo.New()
-//		req, err := http.NewRequest(echo.PUT, "/book", strings.NewReader(string(mockJSON)))
+//		req, err := http.NewRequest(echo.PUT, "/product", strings.NewReader(string(mockJSON)))
 //		require.NoError(t, err)
 //		req.Header.Set(echo.HeaderContentType, echo.MIMEApplicationJSON)
 //
 //		rec := httptest.NewRecorder()
 //		c := e.NewContext(req, rec)
-//		c.SetPath("/book")
+//		c.SetPath("/product")
 //		handler := bookHttpDelivery.BookHandler{
 //			BUsercase: mockBookUCase,
 //		}
@@ -122,13 +122,13 @@ package bookHttpDelivery_test
 //			Return(nil, nil)
 //
 //		e := echo.New()
-//		req, err := http.NewRequest(echo.DELETE, "/book/"+mockBookID, strings.NewReader(""))
+//		req, err := http.NewRequest(echo.DELETE, "/product/"+mockBookID, strings.NewReader(""))
 //		require.NoError(t, err)
 //		req.Header.Set(echo.HeaderContentType, echo.MIMEApplicationJSON)
 //
 //		rec := httptest.NewRecorder()
 //		c := e.NewContext(req, rec)
-//		c.SetPath("/book/:id")
+//		c.SetPath("/product/:id")
 //		c.SetParamNames("id")
 //		c.SetParamValues(mockBookID)
 //		handler := bookHttpDelivery.BookHandler{

@@ -1,27 +1,27 @@
-package bookHttpDelivery
+package productHttpDelivery
 
 // ResponseError represent the reseponse error struct
 /*type ResponseError struct {
 	Message string `json:"message"`
 }
 
-// BookHandler  represent the httphandler for book
+// BookHandler  represent the httphandler for product
 type BookHandler struct {
 	BUsercase domain.BookUsecase
 }
 
-// New will initialize the book resources endpoint
+// New will initialize the product resources endpoint
 func New(e *echo.Echo, bu domain.BookUsecase) {
 	handler := &BookHandler{
 		BUsercase: bu,
 	}
 	e.GET("/books", handler.Fetch)
 	e.POST("/books", handler.StoreMany)
-	e.PUT("/book", handler.Update)
-	e.DELETE("/book/:id", handler.Delete)
+	e.PUT("/product", handler.Update)
+	e.DELETE("/product/:id", handler.Delete)
 }
 
-// Fetch will fetch the book based on given params
+// Fetch will fetch the product based on given params
 func (b *BookHandler) Fetch(c echo.Context) error {
 	limitS := c.QueryParam("limit")
 	limit, _ := strconv.Atoi(limitS)
@@ -55,15 +55,15 @@ func (b *BookHandler) StoreMany(c echo.Context) error {
 	return c.JSON(http.StatusCreated, result)
 }
 
-// Update will update book by given param
+// Update will update product by given param
 func (b *BookHandler) Update(c echo.Context) error {
-	book := new(domain.Book)
-	err := c.Bind(&book)
+	product := new(domain.Book)
+	err := c.Bind(&product)
 	if err != nil {
 		return c.JSON(http.StatusUnprocessableEntity, err.Error())
 	}
 
-	_, err = b.BUsercase.UpdateBook(*book)
+	_, err = b.BUsercase.UpdateBook(*product)
 	if err != nil {
 		return c.JSON(getStatusCode(err), ResponseError{Message: err.Error()})
 	}
@@ -71,7 +71,7 @@ func (b *BookHandler) Update(c echo.Context) error {
 	return c.NoContent(http.StatusOK)
 }
 
-// Delete will delete book by given param
+// Delete will delete product by given param
 func (b *BookHandler) Delete(c echo.Context) error {
 	_, err := b.BUsercase.DeleteBook(c.Param("id"))
 	if err != nil {
@@ -81,13 +81,13 @@ func (b *BookHandler) Delete(c echo.Context) error {
 	return c.NoContent(http.StatusOK)
 }
 
-func isRequestValid(book *domain.Book) (bool, error) {
+func isRequestValid(product *domain.Book) (bool, error) {
 	return true, nil
 }
 
 func isRequestValidSlice(books *[]domain.Book) (bool, error) {
-	for _, book := range *books {
-		return isRequestValid(&book)
+	for _, product := range *books {
+		return isRequestValid(&product)
 	}
 
 	return true, nil

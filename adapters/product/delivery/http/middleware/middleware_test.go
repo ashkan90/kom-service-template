@@ -2,7 +2,7 @@ package BookHttpMiddleware_test
 
 import (
 	"github.com/labstack/echo/v4"
-	"kom-service-template/adapters/book/delivery/http/middleware"
+	"kom-service-template/adapters/product/delivery/http/middleware"
 	"net/http"
 	"net/http/httptest"
 	"testing"

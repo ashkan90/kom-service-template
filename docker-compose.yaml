@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: golang_template_api
+    container_name: kom-service-template
     ports:
       - 4000:4000
     volumes:

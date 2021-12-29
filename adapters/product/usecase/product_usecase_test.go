@@ -1,4 +1,4 @@
-package bookUsecase_test
+package productUsecase_test
 
 //func TestInsertBooks(t *testing.T) {
 //	mockBookRepo := new(mocks.BookRepository)

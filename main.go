@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"github.com/labstack/echo/v4"
-	"kom-service-template/adapters/book/delivery/http/middleware"
+	"kom-service-template/adapters/product/delivery/http/middleware"
 	prometheus_http "kom-service-template/adapters/prometheus/handler/http"
 	"log"
 	"os"
@@ -41,9 +41,8 @@ func main() {
 	e.Use(middL.CORS)
 
 	//bookRepo := bookMongoRepository.New(dbConn)
-	//bookUCase := bookUsecase.New(bookRepo, cfg.GetString("database.mongodb.dbName"), cfg.GetString("database.mongodb.collections.book"))
+	//bookUCase := bookUsecase.New(bookRepo, cfg.GetString("database.mongodb.dbName"), cfg.GetString("database.mongodb.collections.product"))
 	//bookHttpDelivery.New(e, bookUCase)
-
 
 	prometheus_http.New(e)
 

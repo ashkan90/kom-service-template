@@ -1,4 +1,4 @@
-package bookMongoRepository
+package productMongoRepository
 
 //type mongoBookRepository struct {
 //	Conn storage.INoSQLDocument

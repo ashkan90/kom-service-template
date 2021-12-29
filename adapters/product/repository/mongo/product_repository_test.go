@@ -1,4 +1,4 @@
-package bookMongoRepository_test
+package productMongoRepository_test
 
 //
 //func TestCreateMany(t *testing.T) {
