@@ -1,0 +1,23 @@
+{
+  "debug": true,
+  "server": {
+    "port": "4000"
+  },
+  "database": {
+    "mongodb": {
+      "user": "",
+      "password": "",
+      "hosts": [
+        ""
+      ],
+      "dbName": "backend-golang",
+      "collections": {
+        "book": "book"
+      },
+      "options": [
+        "test",
+        "retryWrites=true"
+      ]
+    }
+  }
+}
